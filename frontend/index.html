@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Gestão de Produtos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <main class="card">
+    <h1>Entrar</h1>
+    <p class="subtitle">Acesse sua conta para gerenciar seus produtos.</p>
+
+    <div id="alert" class="alert" role="alert"></div>
+
+    <form id="login-form" novalidate>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+        <div class="field-error" data-error-for="email"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Sua senha" required>
+        <div class="field-error" data-error-for="password"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+    </form>
+
+    <p class="footer-link">Não tem conta? <a href="register.html">Cadastre-se</a></p>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>initLoginPage();</script>
+</body>
+</html>

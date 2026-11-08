@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel | Gestão de Produtos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="brand">Gestão de Produtos</span>
+      <div class="user-area">
+        <span class="user-name">Olá, <strong id="user-name">...</strong></span>
+        <button id="logout-btn" class="btn btn-outline btn-sm">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="alert" class="alert" role="alert"></div>
+
+    <div class="page-header">
+      <div>
+        <h1>Meus produtos</h1>
+        <span id="count" class="count"></span>
+      </div>
+      <a href="product-form.html" class="btn btn-primary">+ Novo produto</a>
+    </div>
+
+    <div class="table-wrap">
+      <div id="loading" class="loading">Carregando produtos...</div>
+
+      <div id="empty" class="empty-state" hidden>
+        <p>Você ainda não cadastrou nenhum produto.</p>
+        <a href="product-form.html" class="btn btn-primary">Cadastrar o primeiro</a>
+      </div>
+
+      <table id="products-table" hidden>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Cadastrado em</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="products-body"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
